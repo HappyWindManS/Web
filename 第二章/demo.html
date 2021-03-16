@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="payment-form.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <h1>支付表单</h1>
+        <p>必填字段<strong><abbr title="required">*</abbr></strong></p>
+        <section>
+            <h2>联系人信息</h2>
+            <fieldset>
+                <legend>标题</legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" id="title_1" name="title" value="M.">
+                            先生
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" id="title_2" name="title" value="Ms.">
+                            女士
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <P>
+                <label for="name">
+                    <span>姓名：</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" id="name" name="username">
+            </P>
+            <P>
+                <label for="eamil">
+                    <span>邮箱：</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" id="eamil" name="useremil">
+            </P>
+            <p>
+                <label for="pwd">
+                    <span>密码：</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="password" id="pwd" name="password">
+            </p>
+        </section>
+        <section>
+            <h2>支付信息</h2>
+            <p>
+                <label for="card">
+                    <span>卡类型：</span>
+                </label>
+                <select id="card" name="usercard">
+                    <option value="visa">visa</option>
+                    <option value="mc">信用卡</option>
+                    <option value="amex">花呗</option>
+                </select>
+            </p>
+            <p>
+                <label for="number">
+                    <span>卡号：</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" id="number" name="cardnumber">
+            </p>
+            <p>
+                <label for="date">
+                    <span>卡有效日期：</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                    <em>输入格式 月/年</em>
+                </label>
+                <input type="text" id="date" name="expiration">
+            </p>
+        </section>
+        <section>
+            <p><button type="submit" onclick="alert('支付成功');">确认支付</button></p>
+        </section>
+    </form>
+</body>
+</html>
